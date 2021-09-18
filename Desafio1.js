@@ -24,6 +24,14 @@ class Usuario {
     addBook (id, libro) {
         this.libros.push({id, libro})
     }
+
+    getBookNames() {
+        let nombres = [];
+        this.libros.forEach(libros => {
+            nombres.push(libros.nombre);
+        });
+        return(`${this.nombre}, ${nombres}`);
+    }
 }
 
 const Nusuario = new Usuario('Joaquin', 'Rodriguez', 
@@ -71,3 +79,11 @@ console.log(NusuarioT);
 NusuarioC.addBook(14, 'Bleach');
 console.log(NusuarioC);
 
+Nusuario.getBookNames();
+console.log(Nusuario.getBookNames());
+NusuarioD.getBookNames();
+console.log(NusuarioD.getBookNames());
+NusuarioT.getBookNames();
+console.log(NusuarioT.getBookNames());
+NusuarioC.getBookNames();
+console.log(NusuarioC.getBookNames());
