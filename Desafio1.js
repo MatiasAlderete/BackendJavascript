@@ -25,65 +25,50 @@ class Usuario {
         this.libros.push({id, libro})
     }
 
-    getBookNames() {
-        let nombres = [];
-        this.libros.forEach(libros => {
-            nombres.push(libros.nombre);
-        });
-        return(`${this.nombre}, ${nombres}`);
-    }
+     getBookNames() {
+         let nombres = [];
+         //let nombreLibro = this.libros;
+         this.libros.forEach(nombreLibro => {
+            console.log(nombreLibro); 
+            nombres.push(nombreLibro.libros);
+         });
+         return(nombres);
+     }
 }
 
 const Nusuario = new Usuario('Joaquin', 'Rodriguez', 
-['Perro'], [{id:0, libro: 'Lo que el viente se llevo'}]);
+['Perro'], [{id:0, libros: 'Lo que el viente se llevo', Autor: 'Victor Fleming'}]);
 const NusuarioD = new Usuario('Abril', 'Martinez', 
-['Canario'], [{id: 1, libro: 'Guerra Mundial Z'}]);
+['Canario'], [{id: 1, libros: 'Guerra Mundial Z', Autor: 'Marc Forster'}]);
 const NusuarioT = new Usuario('Carlos', 'Zarate', 
-['Coballo'], [{id: 2, libro: 'Nightmare'}]);
+['Coballo'], [{id: 2, libros: 'Nightmare', Autor: 'Avenged Sevenfold'}]);
 const NusuarioC = new Usuario('Carla', 'Ramirez', 
-['Gato'], [{id: 3, libro: 'Me Veras Volver'}]);
+['Gato'], [{id: 3, libros: 'Me Veras Volver', Autor: 'Soda Stereo'}]);
 
-
-console.log(Nusuario);
-console.log(NusuarioD);
-console.log(NusuarioT);
-console.log(NusuarioC);
 
 console.log('Los usuarios son:');
 const PrimerUsuario = Nusuario.getFullName();
-const SegundoUsuario = NusuarioD.getFullName();
-const TercerUsuario = NusuarioT.getFullName();
-const CuartoUsuario = NusuarioC.getFullName();
+//const SegundoUsuario = NusuarioD.getFullName();
+//const TercerUsuario = NusuarioT.getFullName();
+//const CuartoUsuario = NusuarioC.getFullName();
 
 
 Nusuario.addMascota('Buho');
-console.log(Nusuario);
-NusuarioD.addMascota('Raton');
-console.log(NusuarioD);
-NusuarioT.addMascota('Serpiente');
-console.log(NusuarioT);
-NusuarioC.addMascota('Mono');
-console.log(NusuarioC);
+//NusuarioD.addMascota('Raton');
+//NusuarioT.addMascota('Serpiente');
+//NusuarioC.addMascota('Mono');
 
 console.log('Cantidad de Mascotas: ', Nusuario.countMascotas());
-console.log('Cantidad de Mascotas: ', NusuarioD.countMascotas());
-console.log('Cantidad de Mascotas: ', NusuarioT.countMascotas());
-console.log('Cantidad de Mascotas: ', NusuarioC.countMascotas());
+//console.log('Cantidad de Mascotas: ', NusuarioD.countMascotas());
+//console.log('Cantidad de Mascotas: ', NusuarioT.countMascotas());
+//console.log('Cantidad de Mascotas: ', NusuarioC.countMascotas());
 
-Nusuario.addBook(8, 'Ahi Vamos');
-console.log(Nusuario);
-NusuarioD.addBook(10, 'Inhumano');
-console.log(NusuarioD);
-NusuarioT.addBook(12, 'Paradojas');
-console.log(NusuarioT);
-NusuarioC.addBook(14, 'Bleach');
-console.log(NusuarioC);
+Nusuario.addBook([{id: 8, Libro: 'Ahi Vamos', Autor: 'Gustavo Cerati'}]);
+//NusuarioD.addBook([{id: 10, Libro: 'Inhumano', Autor: 'Attaque 77'}]);
+//NusuarioT.addBook([{id: 12, Libro: 'Paradojas', Autor: 'Las Pastillas del Abuelo'}]);
+//NusuarioC.addBook([{id: 14, Libro: 'Bleach', Autor: 'Nirvana'}]);
 
 Nusuario.getBookNames();
-console.log(Nusuario.getBookNames());
-NusuarioD.getBookNames();
-console.log(NusuarioD.getBookNames());
-NusuarioT.getBookNames();
-console.log(NusuarioT.getBookNames());
-NusuarioC.getBookNames();
-console.log(NusuarioC.getBookNames());
+//NusuarioD.getBookNames();
+//NusuarioT.getBookNames();
+//NusuarioC.getBookNames();
