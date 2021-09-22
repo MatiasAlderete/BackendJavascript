@@ -8,7 +8,7 @@ class Contenedor {
     async save(utiles) {
      try {
       const contenido = await fs.promises.readFile(`./${this.file}`, 'utf-8');
-        
+ 
          let utiles = []; 
          if (contenido === '') {
             utiles.id = 1;
@@ -16,7 +16,7 @@ class Contenedor {
         } else {
           const utiles = JSON.parse(contenido);
 
-          util.id = listaUtiles[listaUtiles.length -1].id +1;
+          util.id = listaUtiles.id +1;
           listaUtiles.push(utiles);
           utiles = listaUtiles
         }
