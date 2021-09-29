@@ -5,31 +5,31 @@ class Contenedor {
         this.file = file;
     }
 
-    async save(utiles) {
+    async save(misUtiles) {
      try {
       const contenido = await fs.promises.readFile(`./${this.file}`, 'utf-8');
  
          let utiles = []; 
          if (contenido === '') {
-            utiles.id = 1;
-            utiles.push(utiles);
+            misUtiles.id = 1;
+            utiles.push(misUtiles);
         } else {
-          const utiles = JSON.parse(contenido);
+          const listaUtiles = JSON.parse(contenido);
 
-          util.id = listaUtiles.id +1;
-          listaUtiles.push(utiles);
-          utiles = listaUtiles
+          misUtiles.id = listaUtiles[listaUtiles.length - 1].id +1;
+          listaUtiles.push(misUtiles);
+          utiles = listaUtiles;
         }
 
          const utilesString = JSON.stringify(utiles, null, 2);
          await fs.promises.writeFile(`./${this.file}` , utilesString);
-         return util.id;
+         return misUtiles.id;
       }  catch (error) {
             console.error('error', error);
         };
     }
 
-/*     async getAll() {
+     async getAll() {
     try {
           const contenido = await fs.promises.readFile(`./${this.file}`, 'utf-8');
           const listaUtiles = JSON.parse(contenido);
@@ -46,7 +46,7 @@ class Contenedor {
         } catch (error) {
             console.error('Error:', error);
         };
-    } */
+    } 
 }        
 
 module.exports = Contenedor;

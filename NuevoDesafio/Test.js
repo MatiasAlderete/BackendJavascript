@@ -2,21 +2,20 @@ const Contenedor = require('./Contenedor');
 
 const miContenedor = new Contenedor('./Productos.json');
 
-console.log(miContenedor);
+//console.log(miContenedor);
 
-const misUtiles = {
+const misUtilesUsados = {
    utiles: 'Regla',
-   price: '345.40'
+   price: '468.80'
 };
 
 const main = async () => {
-    const id = await miContenedor.save(misUtiles);
-    console.log(id);
+    const id = await miContenedor.save(misUtilesUsados);
 
-//    const list = await miContenedor.getAll();
-//    console.log(list);
+    //const list = await miContenedor.getAll();
+    //console.log(list);
 
-//    await miContenedor.deleteAll();
+    //await miContenedor.deleteAll();
 };
 
 main();
