@@ -5,8 +5,8 @@ const miContenedor = new Contenedor('./Productos.json');
 //console.log(miContenedor);
 
 const misUtilesUsados = {
-   utiles: 'Regla',
-   price: '468.80'
+   utiles: 'Corrector Liquido',
+   price: '896.80'
 };
 
 const main = async () => {

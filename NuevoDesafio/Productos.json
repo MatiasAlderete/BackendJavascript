@@ -8,5 +8,45 @@
     "utiles": "Regla",
     "price": "468.80",
     "id": 2
+  },
+  {
+    "utiles": "Regla",
+    "price": "468.80",
+    "id": 3
+  },
+  {
+    "utiles": "Corrector Liquido",
+    "price": "896.80",
+    "id": 4
+  },
+  {
+    "utiles": "Corrector Liquido",
+    "price": "896.80",
+    "id": 5
+  },
+  {
+    "utiles": "Corrector Liquido",
+    "price": "896.80",
+    "id": 6
+  },
+  {
+    "utiles": "Corrector Liquido",
+    "price": "896.80",
+    "id": 7
+  },
+  {
+    "utiles": "Corrector Liquido",
+    "price": "896.80",
+    "id": 8
+  },
+  {
+    "utiles": "Corrector Liquido",
+    "price": "896.80",
+    "id": 9
+  },
+  {
+    "utiles": "Corrector Liquido",
+    "price": "896.80",
+    "id": 10
   }
 ]

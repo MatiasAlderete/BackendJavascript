@@ -29,7 +29,7 @@ class Contenedor {
         };
     }
 
-     async getAll() {
+    async getAll() {
     try {
           const contenido = await fs.promises.readFile(`./${this.file}`, 'utf-8');
           const listaUtiles = JSON.parse(contenido);
@@ -47,6 +47,20 @@ class Contenedor {
             console.error('Error:', error);
         };
     } 
+
+    async getById() {
+        try {
+         const contenido = await fs.promises.readFile(`./${this.file}`, 'utf-8');
+         const listaUtiles = JSON.parse(contenido);
+
+         id = 18;
+         listaUtiles = contenido.getElementById(id);
+
+            return listaUtiles;
+      } catch (error) {
+            console.error('Error:', error);
+          };        
+    }
 }        
 
 module.exports = Contenedor;
